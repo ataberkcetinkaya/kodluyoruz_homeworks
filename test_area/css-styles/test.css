@@ -1,0 +1,155 @@
+.turuncu{
+  background-color: #FFA500;
+}
+.darkblue {
+  color:darkblue;
+}
+
+/*************************************************/
+
+#mavi{
+  background-color: #0000FF;
+  color: rgb(236, 236, 241);
+}
+#lila{
+  color: #c8a2c8;
+}
+
+/*************************************************/
+
+[name]{
+  color: orange;
+}
+
+.btn[disabled] {
+  color: orchid;
+}
+
+/*************** OZELLIK SECICILER (Attribute Selectors) *****************/
+
+div[title="deneme"] { /*** 1 - direkt olarak ismiyle eşleşen ***/
+  background-color: orange;
+}
+
+/*************************************************/
+
+div[title~="isim"] {  /*** 2 - Burada ~= ifadesi ile title özelliği "isim" içeren divlere eriştik. ***/
+  color: orange;
+}
+
+/*************************************************/
+
+a[href ^= "https"] { /*** 3 - Burada ^= ifadesi ile href özelliği "https" ile başlayan a etiketlerine eriştik. ***/
+  color: palegreen;
+}
+
+/*************************************************/
+
+a[href *= "http"] { /*** 4 - Burada *= ifadesi ile href özelliği "http" içeren a etiketlerine eriştik. ***/
+  color: palegreen;
+}
+
+/*************************************************/
+
+div[class$="test"] { /*** 5 - Burada $= ifadesi ile class özelliği sonunda "test" içeren divlere eriştik.  ***/
+  background: yellow;
+}
+
+/*************************************************/
+
+a[href*="https"][href$="com"] { /*** 6 - Burada https ile başlayan ve sonunda com olan a etiketlerine eriştik..  ***/
+  color: orange;
+}
+
+/*************** GRUP SECICILER (Group Selectors) *****************/
+h1,h2,h3{
+  color:orange; /*----- Tüm h1, h2, h3 etiketlerine erişmiş olduk. -----*/ 
+}
+
+p.turuncu {  /* 1 - Burada sınıf ismi .turuncu olan p etiketlerine ulaştık. */
+  color:orange;
+}
+
+/*************** COCUK SECICILER (Child Selectors) *****************/
+/* Artık etiketleri birbiriyle olan hiyerarşik durumuna göre seçerek CSS özelliklerini belirleyeceğiz.
+ Child selector, kendisi ve kendisini sarmalayan bir üst etiketle olan ilişkiyi gösterir ve > işareti ile ifade edilir. */
+
+p > span{   /* 1 - Parent etiketi yani bir üst kapsayıcısı p olan span etiketine ulaştık. */
+  color:orange;
+}
+p > span >b{
+  color:blue;
+}
+div > ul >li#first{
+  color:red;
+}
+
+/*************** Torun-Soy Seçiciler (Descentad Selectors) *****************/
+/* Bir kapsayıcı yani parent element altındaki tüm etiketlere ulaşmak için kullanılır. Her ulaşılacak etiket arasına boşluk konulur. */
+div p{
+  background-color:blue; /* 1 - Burada div içinde olan tüm p etiketlerine ulaşırız. */
+}
+
+
+/*************** Genel Kardeş Seçiciler (General Sibling Selectors) *****************/
+/* Aynı parent etikete sahip olan ve birbiri ardına gelen etiketleri seçmek için kullanılır. 
+AltGr+ü Kambinasyonuyla oluşan ~ işareti ile gösterilir. */
+ul ~ p{
+  color:orange; /* 1 - Burada dikkat edilmesi gereken iki nokta var. */
+}    /* Birincisi <p> etiketi <ul> etiketinden sonra gelmeli (arada başka etiketler olabilir) ve ikiside aynı düzeyde yani aynı parent etiketine sahip olmalılar.*/
+
+
+/*************** Bitişik Kardeş Seçiciler (Adjacent Sibling Selector) *****************/
+/* Genel kardeş seçiciden tek farkı belirtilen etiketler bitişik arka arkaya gelmeliler. + işareti ile gösterilir. */
+ul + p{
+  color:green;
+}
+
+
+/*************** Sahte Sınıf Seçiciler (Pseudo classes) *****************/
+/* Sahte sınıflar kullanarak HTML etiketlerine CSS uygulayabiliriz. Kullanımları selector:pseudo class{}şeklindedir. */
+
+/* :link */
+a#google:link { /* 1 - Daha önce tarayıcıda açılmamış linke CSS uygular. Not: Etkisini görmek için tarayıcıya geçmişi temizlemek gerekebilir. */
+  color: red;
+}
+
+/* :hover */
+a.test:hover { /* 2 - Seçici ile işaretlenen etiketin üzerine mouse ile gelindiğinde CSS uygalanır ve mouse üzerinde değilken etki kaybolur. */
+  color: red;
+}
+
+/* :active */
+a:active {  /* 3 - Mouse ile tıklandığında CSS uygulanır. Tıklama kaldırıldığında etki kaybolur. */
+  position: relative;
+  top: 5px;
+}
+
+/* :first-child */
+ul > li:first-child { /* 4 - İlk child etikete CSS uygulanır. */
+  color: orange;
+}
+
+/* :last-child >>> ustekkinin tam tersi */
+
+/* ::first-letter */
+p::first-letter {  /* 5 - Blok seviyesinde bir etiketteki ilk harfe CSS uygular. <span> blok seviyesinde bir etiket olmadığından bu pseudo class uygulanamaz. */
+  font-size: 20px;
+  color: orange;
+}
+
+/* ::first-line >> Blok seviyesinde bir etiketin ilk satırına CSS uygular. */
+
+/* ::before */
+p::before {   /* 6 - Belirtilen etiketin önüne CSS uygular. */
+  content: "selam"; 
+  color: orange;
+}
+
+/* ::after >>> usttekinin tam tersi */
+
+/* KAYNAKLAR
+Kaynaklar
+https://www.w3schools.com/cssref/css_selectors.asp
+https://css-tricks.com/almanac/selectors/
+*/

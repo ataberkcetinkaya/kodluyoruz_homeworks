@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Testing</title>
+    <link rel="stylesheet" href="css-styles/test.css" />
+    
+</head>
+<body>  
+      <button style="color: black;">send</button>
+      <ul>
+            <li name="html">HTML</li>
+            <li name="css">CSS</li>
+      </ul>
+
+      <p class="turuncu">Arka plan rengim turuncu</p>
+      <h1 class="darkblue">Arka plan rengim turuncu</h1>
+
+      <p id="mavi">Arka plan rengim mavi ve yazım beyaz</p>
+      <div id="lila">yazı rengim lila</div>
+
+      <br>
+
+      <button name="">gönder</button>
+      <ul>
+            <li name="html">HTML</li>
+            <li name="css">CSS</li>
+      </ul>
+
+      <button class="btn" disabled="disabled">Submit</button>
+
+      <!-- OZELLIK SECICILER (Attribute Selectors) -->
+
+      <div title="Deneme">Lorem, ipsum dolor.</div> <!-- 1 -->
+      <div title="deneme">Lorem, ipsum dolor.</div>
+      <div div name="denemefalan">Lorem, ipsum.</div>
+
+      <br>
+
+      <div title="isim">Lorem, ipsum dolor.</div> <!-- 2 -->
+      <div title="isimler">Lorem, ipsum dolor.</div>
+      <div title="isim ve şehirler">Lorem, ipsum dolor.</div>
+
+      <br>
+
+      <a href="https://www.google.com/">google</a> <!-- 3 -->
+      <a href="https://github.com/">github</a>
+      <a href="http://github.com/">github</a>
+
+      <br>
+
+      <a href="https://www.google.com/">google</a> <!-- 4 -->
+      <a href="https://github.com/">github</a>
+      <a href="http://github.com/">github</a>
+
+      <br>
+
+      <div class="bir_test">Lorem, ipsum dolor.</div> <!-- 5 -->
+      <div class="iki-test">Lorem, ipsum dolor.</div>
+      <div class="uc test">Lorem, ipsum dolor.</div>
+      <div class="dorttest">Lorem, ipsum dolor.</div>
+
+      <br>
+
+      <a href="https://www.google.com/"> Google</a> <!-- 6 -->
+      <a href="https://reactjs.org/">React.js</a>
+      <a href="https://css-tricks.com/">Css Tricks</a>
+
+      <!-- GRUP SECICILER (Group Selectors) -->
+
+      <p class="turuncu">turuncu yazı</p> <!-- 1 -->
+      <p>normal yazı</p>
+
+      <!-- COCUK SECICILER (Child Selectors) -->
+
+      <p>
+            <span>child element</span> <!-- 1 -->
+      </p>
+      <p>
+            <span>Burası turuncu renkte <b>mavi renkte yazılacak</b></span>
+      </p>
+      <p>
+            <span>Burası turuncu renkte <b>mavi renkte yazılacak</b></span>
+      </p>
+      <div>
+            <ul>
+              <li id="first">bir</li>
+              <li>iki</li>
+            </ul>
+      </div>
+
+      <!-- Torun-Soy Seçiciler ((Descentad Selectors)) -->
+
+      <div>
+            <p>Bu p etiketi arka planı mavi renk</p> <!-- 1 -->
+            <ul>
+              <li>
+                <p>Bu p etiketi arka planı mavi renk</p>
+              </li>
+            </ul>
+            <p>Bu p etiketi arka planı mavi renk</p>
+      </div>
+
+      <!-- Genel Kardeş Seçiciler (General Sibling Selectors) -->
+      <div>
+            <p>Lorem, ipsum.</p>   <!-- 1 -->
+            <ul>
+              <li>
+                <p>Lorem, ipsum dolor.</p>
+              </li>
+            </ul>
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Bu p etiketi turuncu renkte</p>
+      </div>
+
+      <!-- Bitişik Kardeş Seçiciler (Adjacent Sibling Selector) -->
+      <div>
+            <p>Lorem, ipsum.</p>    <!-- 1 -->
+            <ul>
+              <li>
+                <p>Lorem, ipsum.</p>
+              </li>
+            </ul>
+            <p>Bu p etiketinin yazı rengi yeşil</p>
+      </div>
+
+      <!-- Sahte Sınıf Seçiciler (Pseudo classes) -->
+      <a id="google" href="https://www.google.com/">Google</a> <!-- 1 -->
+
+      <a class="test" href="https://www.github.com/">Github</a> <!-- 2 -->
+
+      <a href="#">Submit</a> <!-- 3 -->
+      
+
+      <ul>              <!-- 4 -->
+            <li>lorem</li>
+            <li>lorem</li>
+            <li>lorem</li>
+            <li>lorem</li>
+      </ul>
+
+
+      <p>Lorem ipsum dolor sit.</p> <!-- 5 -->
+
+      <p>Lorem ipsum dolor sit.</p> <!-- 6 -->
+</body>
+</html> 
