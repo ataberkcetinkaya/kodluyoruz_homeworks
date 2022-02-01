@@ -1,0 +1,31 @@
+.margin {
+    margin-left: 17em;
+    color:rgb(230, 41, 41);
+    font-family: 'Comforter', cursive;
+}
+.margin2 {
+    margin-left: 30em;
+    color:rgb(251, 255, 5);
+    font-family: 'Comforter', cursive;
+}
+.margin3 {
+    margin-left: 23em;
+    color:darkviolet;
+    font-family: 'Comforter', cursive;
+}
+.margin4 {
+    margin-left: 26em;
+    font-family: 'Comforter', cursive;
+}
+.margin5 {
+    margin-left: 32em;
+}
+.margin5list {
+    margin-left: 35em;
+    font-size: 15px;
+    
+}
+.cars {
+    margin-left: 23em;
+    color:rgb(0, 255, 13);
+}
