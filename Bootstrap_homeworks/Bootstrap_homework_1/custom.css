@@ -1,0 +1,15 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .img-option {
+    max-width: 100%; 
+    height: auto;
+  }
+  
+  .card-size {
+    height: 250px;
+  }
