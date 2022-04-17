@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saat & Karsilama</title>
+    <style>
+        .mainpart {
+            position: relative;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .namepart {
+            background-color: rgb(71, 185, 252);
+            display: inline-block;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(180, 180, 180);">
+    
+    <div class="mainpart">
+        <img
+        src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+        alt=""
+        class="rounded"/>
+
+        <br><br>
+
+        <div class="namepart">
+            <h4 id="name"></h4>
+        </div>
+        
+        <div class="datepart">
+            <h5 id="date"></h5>
+            <h5 id="day"></h5>
+        </div>
+        
+    </div>
+    
+
+
+    <script>
+        let name = prompt("Adinizi girin: ");
+        let getName = document.querySelector("#name");
+
+        getName.innerHTML = `Merhaba, ${name}! Hoşgeldin!`
+
+        let getTime = document.querySelector("#date");
+
+    let time = () => {
+        let tarih = new Date();
+
+        let saat = tarih.getHours();
+        let dakika = tarih.getMinutes();
+        let saniye = tarih.getSeconds();
+
+        const days = ["Pazar","Pazartesi","Sali","Carsamba","Persembe","Cuma","Cumartesi"];
+        document.querySelector("#day").innerHTML = days[tarih.getDay()];
+
+        let html_print = `
+            <span><strong>${saat} :</strong></span>
+            <span><strong>${dakika} :</strong></span> 
+            <span><strong>${saniye}</strong></span>
+        `
+        getTime.innerHTML = html_print;
+    }
+    
+    setInterval(time, 1000)
+
+    </script>
+</body>
+</html>
